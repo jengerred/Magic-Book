@@ -2,14 +2,31 @@ import './Book.styles.css';
 import Stars from './Stars';
 import Cover from './Cover';
 
+import {useNavigate, useLocation} from 'react-router-dom';
+
 function End(){
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    
+        const prevPage = () =>{ 
+          let { from } = location.state || { from : {pathname : '/book'}};
+          navigate(from);
+        }
+        const startPage = () =>{ 
+        let { from } = location.state || { from : {pathname : '/title'}};
+        navigate(from);
+      }
     return(
         <>
         <div className="pages">
             <div className="back"></div>
-            <div className="page5"></div>
+            <div className="page5" onClick={prevPage}>
+                <br/>
+            <button className="flip">Previous Page</button>
+            </div>
              <div className="page3"></div>
-            <div className="page2">
+            <div className="page2" onclick={startPage}>
                 <div className="top">
                     <div className="flip"><Stars/></div>
                     <br/>
@@ -19,7 +36,8 @@ function End(){
                     <br/>
                     <div className="flip"><Stars/></div>
                 </div>
-            </div>
+                <br/><br/>
+              </div>
             <div className="page1"></div>
              <Cover/>
         </div>

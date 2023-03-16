@@ -14,19 +14,25 @@ function Title(){
         let { from } = location.state || { from : {pathname : '/book'}};
         navigate(from);
       }
+      const coverPage = () =>{ 
+        let { from } = location.state || { from : {pathname : '/'}};
+        navigate(from);
+      }
     return (
         <>
       
         <div className="pages">
         <div className="back"> </div>
-            <div className="page4">  
+            <div className="page4" onClick={turnPage}>  
+            <br/>
+            <button >Next Page</button>
             <CurvedText/>
         <h5>By Author Name and the Magic Storybook Generator</h5>
-            <button className="new-page" onClick={turnPage}>Next Page</button>
+        <div ></div>
             </div>
            
             <div className="page2"></div>
-            <div className="page1"></div>
+            <div className="page1" onClick={coverPage}></div>
            
             <Cover/>
             </div>
