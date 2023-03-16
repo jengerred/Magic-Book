@@ -1,0 +1,183 @@
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1200px;
+
+  }
+.back {
+    background-color: rgb(100, 100, 228);
+    width: 400px;
+    height: 550px;
+  }
+
+  .pages {
+    transform-style: preserve-3d;
+    position: relative;
+    width: 750px;
+    height: 550px;
+    cursor: pointer;
+    backface-visibility: visible;
+  }
+  
+ .back, .page1, .page2, .page3, .page4, .page5, .page6 {
+    transform-style: preserve-3d;
+    position: absolute;
+    width: 400px;
+    height: 100%;
+    top: 0; 
+    margin-left: 200px; 
+    transform-origin: left center;
+    transition: transform .5s ease-in-out, box-shadow .35s ease-in-out;
+  }
+
+  
+ .page1, .page3, .page5 {
+    border-bottom-right-radius: .5em;
+    border-top-right-radius: .5em;
+  }
+  
+  .back, .page2, .page4, .page6 {
+    border-bottom-right-radius: .5em;
+    border-top-right-radius: .5em;
+  }
+  
+  .page1 { 
+    background: #efefef;
+  }
+  
+  .page2 {
+    background: #efefef;
+  }
+  
+  .page3 {
+    background: #f5f5f5;
+  }
+  
+  .page4 {
+    background: #f5f5f5;
+  }
+  
+  .page5 {
+    background: #fafafa;
+  }
+  
+  .page6 {
+    background: #fdfdfd;
+  }
+  
+  .pages:hover .front {
+    transform: rotateY(-160deg) scale(1.1);
+    top: -14px;
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+  }
+  .pages:hover .cover {
+    width: 375px;
+    height: 525px;
+  }
+  
+  .pages:hover .page1 {
+    transform: rotateY(-150deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+  }
+  
+  .pages:hover .page2 {
+    transform: rotateY(-30deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+  }
+  
+  .pages:hover .page3 {
+    transform: rotateY(-140deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+  }
+  
+  .pages:hover .page4 {
+    transform: rotateY(-40deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+  }
+  
+  .pages:hover .page5 {
+    transform: rotateY(-130deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+ 
+  }
+  
+  .pages:hover .page6 {
+    transform: rotateY(-50deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+  }
+  
+  .pages:hover .back {
+    transform: rotateY(-20deg) scale(1.1);
+  }
+  .flip {
+
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+    
+  }
+ 
+  
+  .magic > p, .magic > h2, .magic > h1 {
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+    background: linear-gradient(to right, #ff0000 0%, #ff9a00 10%, #d1de21 20%, #4fdc4a 30%, #3fdad8 40%, #2fc9e2 50%, #1c7fee 60%, #5f15f2 70%, #ba0cf8 80%, #fb07d9 90%, #ff0000 100%);
+    background-size: 200% auto;
+    
+    color: #000;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    animation: move 5s linear infinite; }
+    @keyframes move {
+      to {
+        background-position: 200% center;
+      }
+    }
+
+   /*.glowing-circle {
+      margin-left: 50px;
+      width: 20px;
+      height: 20px;
+      border-radius:50%;
+      background-color: #fff;
+      -webkit-animation: glowing 1s ease-in-out infinite alternate;
+      -moz-animation: glowing 1s ease-in-out infinite alternate;
+      animation: glowing 1s ease-in-out infinite alternate;
+    }
+   @keyframes glowing {
+      from {
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f0f, 0 0 40px #0ff, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+      }
+      to {
+        box-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+      }
+    }*/
+
+   
+    .fit {
+      max-height: 380px;
+    }
+    
+    .image {
+      height: 100px;
+      width: 200px;
+      -moz-transform: scale(-1, 1);
+      -webkit-transform: scale(-1, 1);
+      -o-transform: scale(-1, 1);
+      -ms-transform: scale(-1, 1);
+      transform: scale(-1, 1);
+    }
+   
+    .top {
+      margin-top:30%;
+    }

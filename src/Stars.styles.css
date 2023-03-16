@@ -1,0 +1,160 @@
+.star {
+    position: relative;
+    
+    display: inline-block;
+    width: 0;
+    height: 0;
+    
+    margin-left: 1em;
+    margin-right: .9em;
+    margin-bottom: 0em;
+    
+    border-right:  .3em solid transparent;
+    border-bottom: .7em  solid #FC0;
+    border-left:   .3em solid transparent;
+  
+    /* Controlls the size of the stars. */
+    font-size: 8px;
+    animation: blinker 5s linear infinite;
+  }
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+  .star-2 {
+    position: relative;
+    
+    display: inline-block;
+    width: 0;
+    height: 0;
+    
+    margin-left: 5em;
+    margin-right: 0em;
+    margin-bottom: 1.2em;
+    
+    border-right:  .3em solid transparent;
+    border-bottom: .7em  solid rgb(247, 159, 187);
+    border-left:   .3em solid transparent;
+  
+    /* Controlls the size of the stars. */
+    font-size: 12px;
+    animation: blinker-2 2s linear infinite;
+  }
+  @keyframes blinker-2 {
+    50% {
+      opacity: 0;
+    }
+  }
+  .star-3 {
+    position: relative;
+    
+    display: inline-block;
+    width: 0;
+    height: 0;
+    
+    margin-left: 3em;
+    margin-right: .9em;
+    margin-bottom: 1.2em;
+    
+    border-right:  .3em solid transparent;
+    border-bottom: .7em  solid rgb(47, 0, 255);
+    border-left:   .3em solid transparent;
+  
+    /* Controlls the size of the stars. */
+    font-size: 10px;
+    animation: blinker-3 3s linear infinite;
+  }
+  @keyframes blinker-3 {
+    50% {
+      opacity: 0;
+    }
+  }
+  .star-4 {
+    position: relative;
+    
+    display: inline-block;
+    width: 0;
+    height: 0;
+    
+
+    margin-left: 3em;
+    margin-right: .9em;
+    margin-bottom: 0em;
+    
+    border-right:  .3em solid transparent;
+    border-bottom: .7em  solid #FC0;
+    border-left:   .3em solid transparent;
+    
+  
+    /* Controlls the size of the stars. */
+    font-size: 10px;
+    animation: blinker-4 1s linear infinite;
+  }
+  @keyframes blinker-4 {
+    50% {
+      opacity: 0;
+    }
+  }
+  .star-5 {
+    position: relative;
+    
+    display: inline-block;
+    width: 0;
+    height: 0;
+
+    margin-left: 6em;
+    margin-right: .9em;
+    margin-bottom: 1.2em;
+    
+    border-right:  .3em solid transparent;
+    border-bottom: .7em  solid #FC0;
+    border-left:   .3em solid transparent;
+  
+    /* Controlls the size of the stars. */
+    font-size: 8px;
+    animation: blinker-5 1s linear infinite;
+  }
+  @keyframes blinker-5 {
+    50% {
+      opacity: 0;
+    }
+  }
+    
+    .star:before, .star:after,   .star-2:before, .star-2:after,  .star-3:before, .star-3:after, .star-4:before, .star-4:after,  .star-5:before, .star-5:after {
+      content: '';
+      
+      display: block;
+      width: 0;
+      height: 0;
+      
+      position: absolute;
+      top: .6em;
+      left: -1em;
+    
+      border-right:  1em solid transparent;
+
+      border-left:   1em solid transparent;
+    
+      transform: rotate(-35deg);
+    }
+    .star:before, .star:after{
+      border-bottom: .7em  solid #FC0;
+    }
+    .star-2:before, .star-2:after{
+      border-bottom: .7em  solid rgb(247, 159, 187);;
+    }
+    .star-3:before, .star-3:after {
+      border-bottom: .7em  solid rgb(47, 0, 255);
+    }
+    .star-4:before, .star-4:after {
+      border-bottom: .7em  solid #FC0;;
+    }
+    .star-5:before, .star-5:after {
+      border-bottom: .7em  solid #FC0;;
+    }
+
+
+    .star:after, .star-2:after, .star-3:after, .star-4:after, .star-5:after {  
+      transform: rotate(35deg);
+    }
